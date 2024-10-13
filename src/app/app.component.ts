@@ -59,9 +59,8 @@ export class AppComponent implements OnInit {
 		});
 	}
 
-	onMarkerClick(marker: MapAdvancedMarker) {
-		this.infoWindow.position = marker.position; // Definindo a posição diretamente no InfoWindow
-		this.infoWindow.open(undefined, true, marker.title); // Abrindo o InfoWindow sem anchor
+	onMarkerClick(marker: any) {
+		this.infoWindow.openAdvancedMarkerElement(marker.advancedMarker, marker.advancedMarker.title);
 	}
 
 }
